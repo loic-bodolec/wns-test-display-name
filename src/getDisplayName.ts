@@ -1,6 +1,7 @@
-const getDisplayName = (firstName: string, lastName: string, city: string = '') => {
+const getDisplayName = (firstName: string, lastName: string, city: string = '', curriculum: string = '') => {
     const mayBeCity = city || '?'
-    return `[${mayBeCity}] ${firstName} ${lastName}`
+    const mayBeWns = curriculum === 'workstudy' ? ' - WnS' : ''
+    return `[${mayBeCity}] ${firstName} ${lastName}${mayBeWns}`
 }
 
 export default getDisplayName
