@@ -1,5 +1,6 @@
 const getDisplayName = (firstName: string, lastName: string, city: string = '') => {
-    return ''
+    const mayBeCity = city || '?'
+    return `[${mayBeCity}] ${firstName} ${lastName}`
 }
 
 export default getDisplayName
